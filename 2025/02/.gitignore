@@ -1,0 +1,6 @@
+gbdk/
+*.noi
+*.map
+*.gb
+*.o
+input.h
