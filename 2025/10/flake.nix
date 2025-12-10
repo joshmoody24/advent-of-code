@@ -21,7 +21,7 @@
             export PLTADDONDIR="$PWD/.racket-addon"
             echo "PLTADDONDIR set to: $PLTADDONDIR"
             echo "First time in this shell, run:"
-            echo "    raco pkg install --auto mk"
+            echo "    raco pkg install --auto minikanren"
           '';
         };
       });
