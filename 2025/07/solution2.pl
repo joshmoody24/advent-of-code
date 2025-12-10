@@ -17,14 +17,14 @@ next_col(Col, NextRow, NextCol) :-
 
 path_count([_], _, 1).
 
-path_count([CurrentRow|RestRows], Col, Count) :-
+path_count([CurrentRow|RestRows], Col, TotalCount) :-
     findall(Count,
             (
               next_col(Col, CurrentRow, NextCol),
               path_count(RestRows, NextCol, Count)
             ),
             Counts),
-    sum_list(Counts, Count).
+    sum_list(Counts, TotalCount).
 
 start_col(Row, Col) :- nth0(Col, Row, 'S').
 
